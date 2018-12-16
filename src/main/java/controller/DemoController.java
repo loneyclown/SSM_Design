@@ -1,6 +1,7 @@
 package controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import service.IDemoService;
@@ -11,6 +12,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/demo")
 public class DemoController {
@@ -23,7 +25,7 @@ public class DemoController {
         map.put("is", false);
 
 
-        
+
         return map;
     }
 }
